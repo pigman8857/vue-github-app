@@ -20,5 +20,5 @@ jobs:
       - name: run ci
         run: npm ci
 
-      - name: Run byuild production (create Dist folder)
+      - name: Run build production (create Dist folder)
         run: npm run build
