@@ -41,6 +41,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-production
+          path: dist
         
       - run: ls
+      - run: ls dist
+      # deploy to cloud
+      - uses: actions/checkout@v4
+
+      - name: publish to github page
+        uses: Serhiika/VuePagesAction@1.0.4
+        with: 
+          username: ${{ github.actor }} # pigman8857
+          reponame: ${{ github.event.repository.name }} # vue-github-app
+          token: ${{ secrets.GITHUB_TOKEN }}
     
