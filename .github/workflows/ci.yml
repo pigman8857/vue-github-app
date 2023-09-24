@@ -51,4 +51,6 @@ jobs:
             - name: Run unit test
               run: npm run test:unit
         
+            - name: See directory
+              run: ls
 
