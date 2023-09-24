@@ -19,16 +19,15 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: '18'
+            - name: run ci
+              run: npm ci
 
-            - name: install Dependencies
-              run: npm i
-
-            - name: Run eslint
+            - name: Run lint
               run: npm run lint
 
             - name: Run format code with prettier
               run: npm run format
-              
+
             - name: Run unit test
               run: npm run test:unit
         
