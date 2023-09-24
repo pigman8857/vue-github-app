@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          
+
       - name: run ci
         run: npm ci
 
-      - name: Run byuild prodcut (create Dist folder)
+      - name: Run byuild production (create Dist folder)
         run: npm run build
